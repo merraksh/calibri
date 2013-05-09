@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\MSVisualStudio\v10\Win32\Debug</LibraryPath>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\MSVisualStudio\v10\Win32\Debug</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\MSVisualStudio\v10\Win32\Release</ReferencePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\MSVisualStudio\v10\Win32\Release;C:\Users\pietro\Lapack</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglLandP;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglResidualCapacity;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglDuplicateRow;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglTwomir;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglMixedIntegerRounding2;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglFlowCover;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglClique;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglRedSplit;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Clp\src\OsiClp;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Osi\src\Osi;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\CoinUtils\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglKnapsackCover;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglGomory;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglPreProcess;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglProbing;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Clp\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;libCbc.lib;libOsi.lib;libCgl.lib;libCbcSolver.lib;libClp.lib;libCoinUtils.lib;libOsiClp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglLandP;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglResidualCapacity;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglDuplicateRow;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglTwomir;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglMixedIntegerRounding2;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglFlowCover;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglClique;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglRedSplit;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Clp\src\OsiClp;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Osi\src\Osi;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\CoinUtils\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglKnapsackCover;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglGomory;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglPreProcess;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src\CglProbing;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cbc\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Clp\src;C:\Users\pietro\Visual Studio 2010\Projects\Cbc-2.7\Cgl\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;libCbc.lib;libOsi.lib;libCgl.lib;libCbcSolver.lib;libClp.lib;libCoinUtils.lib;libOsiClp.lib;clapack_nowrap.lib;BLAS_nowrap.lib;libf2c.lib;msvcrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="calAddCutHeur.cpp" />
+    <ClCompile Include="calBT.cpp" />
+    <ClCompile Include="calCube-misc.cpp" />
+    <ClCompile Include="calCube-project.cpp" />
+    <ClCompile Include="calCube.cpp" />
+    <ClCompile Include="calCut.cpp" />
+    <ClCompile Include="calInstance.cpp" />
+    <ClCompile Include="calMain.cpp" />
+    <ClCompile Include="calModel.cpp" />
+    <ClCompile Include="calPopulate.cpp" />
+    <ClCompile Include="calSearch.cpp" />
+    <ClCompile Include="cmdLine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="calBT.hpp" />
+    <ClInclude Include="calCube.hpp" />
+    <ClInclude Include="calCut.hpp" />
+    <ClInclude Include="calInstance.hpp" />
+    <ClInclude Include="calModel.hpp" />
+    <ClInclude Include="cmdLine.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
